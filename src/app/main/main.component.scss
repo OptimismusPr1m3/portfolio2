@@ -1,0 +1,16 @@
+@media(max-width: 1450px) {
+    .aboutMeDesktop {
+        display: none !important;
+    }
+    .aboutMeMobile {
+        display: flex !important;
+    }
+}
+
+.aboutMeDesktop {
+    display: block;
+}
+
+.aboutMeMobile{
+    display: none;
+}

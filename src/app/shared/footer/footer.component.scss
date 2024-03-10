@@ -1,0 +1,186 @@
+.footer-section {
+  background-color: #141d2f;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #ffffff;
+  > .f-transition-orange {
+    width: 100%;
+    height: 5px;
+    background-color: #e86f00;
+  }
+  > .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 280px;
+    align-items: center;
+    @media (max-width: 850px) {
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 350px;
+    }
+    > .left-cont {
+      display: flex;
+      width: 350px;
+      flex-direction: column;
+      > a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+      > .prename-container {
+        margin-left: 120px;
+        display: flex;
+        flex-direction: row;
+        @media (max-width: 1450px) {
+          margin-left: 90px;
+        }
+        @media (max-width: 900px) {
+          margin-left: 48px;
+        }
+        @media(max-width: 850px) {
+          margin-left: 0;
+          justify-content: center;
+          margin-top: 40px;
+        }
+        > p {
+          font-weight: 700;
+          font-size: 40px;
+          @media(max-width: 850px) {
+            font-size: 48px;
+          }
+        }
+        > .i-letter-styling {
+          background: linear-gradient(to top, #ffffff 65%, #ff4747 35%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        > .n-letter-styling {
+          background: linear-gradient(to right, #ffffff 34%, #fa7902 34%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      > .impressum-wrapper {
+        margin-left: 124px;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 1450px) {
+          margin-left: 94px;
+        }
+        @media(max-width: 900px){
+          margin-left: 54px;
+        }
+        @media (max-width: 850px) {
+          display: none;
+        }
+        &:hover .impressum-underline {
+          background-color: #ff4747;
+        }
+        > .impressum-cont {
+          text-decoration: none;
+          color: #ffffff;
+          margin-top: -8px;
+        }
+        > .impressum-underline {
+          transition: all 0.3s ease;
+          background-color: transparent;
+          height: 2px;
+          width: 54px;
+        }
+      }
+    }
+    > .name-copyR {
+      flex-direction: row;
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 300px;
+      @media(max-width: 850px) {
+       width: 100%;
+       justify-content: center;   
+      }
+      > p {
+        margin-right: 8px;
+        font-weight: 300;
+        font-size: 22px;
+      }
+    }
+    .social-links-content {
+      display: flex;
+      overflow: hidden;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-right: -60px;
+      width: 350px;
+      @media (max-width: 1450px) {
+        margin-right: -90px;
+      }
+      @media (max-width: 900px) {
+        margin-right: -132px;
+      }
+      @media(max-width: 850px) {
+        margin: 0;   
+        width: 100%;
+        justify-content: center; 
+      }
+      > a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        height: 40px;
+        width: 30px;
+        margin-right: 40px;
+        transition: all 0.1s ease;
+        @media(max-width: 850px) { 
+         margin-right: 20px;
+         margin-left: 20px;
+        }
+        &:hover img {
+          transition: all 0.3s ease;
+          transform: scale(1.2);
+          margin-left: 10px;
+          cursor: pointer;
+        }
+        &:hover {
+          transition: all 0.3s ease;
+          margin-right: 70px;
+          cursor: pointer;
+        }
+        > img {
+          height: 30px;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+.impressum-mobile {
+  display: none;
+  @media (max-width: 850px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &:hover .impressum-underline-mobile {
+    background-color: #ff4747;
+  }
+  > .impressum-cont-mobile {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  > .impressum-underline-mobile {
+    transition: all 0.3s ease;
+    background-color: transparent;
+    height: 2px;
+    width: 54px;
+    margin-left: -40px;
+  }
+}

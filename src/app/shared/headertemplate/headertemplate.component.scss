@@ -1,0 +1,216 @@
+div {
+  > .prename-container {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 120px;
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 1450px) {
+      margin-left: 90px;
+    }
+    @media (max-width: 900px) {
+      margin-left: 48px;
+    }
+    @media (max-width: 520px) {
+      margin-left: 24px;
+    }
+    > p {
+      margin: 0;
+      font-weight: 700;
+      font-size: 32px;
+      @media (max-width: 450px) {
+        font-size: 28px;
+      }
+    }
+    > .i-letter-styling {
+      background: linear-gradient(to top, #ffffff 65%, #ff4747 35%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    > .n-letter-styling {
+      background: linear-gradient(to right, #ffffff 34%, #fa7902 34%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.nav-lang-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 80px;
+  @media (max-width: 1450px) {
+    margin-right: 50px;
+  }
+  @media (max-width: 1110px) {
+    display: none;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    a {
+      margin-right: 40px;
+      font-size: 24px;
+      text-decoration: none;
+      color: #ffffff;
+      &:hover {
+        color: #fa7902;
+      }
+      @media (max-width: 700px) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.active-link {
+  color: #fa7902 !important;
+}
+
+.active-underline {
+  background-color: #ff4747;
+  margin-bottom: -4px;
+  width: 56px;
+  height: 3px;
+}
+
+.bar-opened {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cross {
+  height: 32px;
+  margin-right: 90px;
+  &:hover {
+    cursor: pointer;
+  }
+  @media (max-width: 900px) {
+    margin-right: 48px;
+  }
+  @media (max-width: 520px) {
+    margin-right: 24px;
+  }
+  @media (max-width: 450px) {
+    height: 24px;
+  }
+}
+
+.links-column {
+  display: flex !important;
+  flex-direction: column;
+  margin-right: 0;
+  height: 400px;
+  justify-content: space-between;
+  margin-top: 80px;
+  @media (max-width: 700px) {
+    height: 300px;
+  }
+  > div {
+    > a {
+      font-size: 40px;
+      @media (max-width: 700px) {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+.language {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  margin-right: 40px;
+  @media (max-width: 450px) {
+    margin-right: 16px;
+  }
+  > .lang-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 40px;
+    > p {
+      font-size: 18px;
+      @media (max-width: 450px) {
+        font-size: 14px;
+      }
+    }
+    cursor: pointer;
+    > span {
+      height: 2px;
+      width: 0px;
+      background-color: #ff4747;
+    }
+    > .active-lang {
+      animation: underline 0.4s forwards;
+      @media (min-width: 450px) {
+        @keyframes underline {
+          from {
+            width: 0px;
+          }
+          to {
+            width: 32px;
+          }
+        }
+      }
+      @media (max-width: 450px) {
+        @keyframes underline {
+          from {
+            width: 0px;
+          }
+          to {
+            width: 22px;
+          }
+        }
+      }
+    }
+  }
+  > .seperator {
+    height: 24px;
+    width: 2px;
+    background-color: #ff4747;
+    margin-left: 8px;
+    margin-right: 8px;
+    @media (max-width: 450px) {
+      margin-left: 0;
+      margin-right: 0;
+      height: 20px;
+    }
+  }
+}
+
+#aMeMobile {
+  display: none;
+}
+#skillMobile {
+  display: none;
+}
+
+@media (max-width: 1450px) {
+  #aMeDesktop {
+    display: none !important;
+  }
+  #aMeMobile {
+    display: flex !important;
+  }
+  #skillDesktop {
+    display: none !important;
+  }
+  #skillMobile {
+    display: flex;
+  }
+}

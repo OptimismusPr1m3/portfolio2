@@ -1,0 +1,100 @@
+section {
+    background-color: #141d2f;
+    width: 100%;
+    > .mobile-aME-pic-shape{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -177px;
+        @media(max-width: 800px){
+           overflow: hidden;
+        }
+        @media(max-width: 450px) {
+            margin-bottom: -170px;
+            margin-top: 40px;
+        }
+        >.shape {
+            position: absolute;
+            top: 80px;
+            overflow: hidden;
+            @media(max-width: 900px){
+                height: 720px;
+                top: 54px;
+            }
+            @media(max-width: 800px){
+                height: 650px;
+                top: 4px;
+            }
+            @media(max-width: 450px) {
+                height: 464px;
+            }
+        }
+        >.picture {
+            position: relative;
+            top: 0;
+            @media(max-width: 900px){
+                height: 670px;
+            }
+            @media(max-width: 800px){
+                height: 480px;
+            }
+            @media(max-width: 450px) {
+                height: 400px;
+            }
+        }
+    }
+    >.mobile-wave {
+        position: relative;
+        display: flex;
+        width: 100%;
+        z-index: 10;
+        >img {
+            width: 100%;
+            height: 580px;
+            overflow: hidden;
+            margin-top: -50px;
+            @media(max-width: 900px){
+                height: 530px;
+            }
+            @media(max-width: 800px){
+                margin-top: 0;
+                height: 410px;
+            }
+        }
+    }
+    >.mobile-about-cont {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        color: #ffffff;
+        padding-left: 90px;
+        padding-right: 90px;
+        z-index: 50;
+        flex-direction: column;
+        margin-top: -250px;
+        margin-bottom: 300px;
+        @media(max-width: 900px) {
+            padding-left: 48px;
+            padding-right: 48px;
+        }
+        @media(max-width: 800px){
+            margin-top: -180px;
+        }
+        @media(max-width: 520px) {
+            padding-left: 24px;
+            padding-right: 24px;
+          }
+    }
+    
+}
+.skills-section {
+    position: relative;
+    z-index: 20;
+    top: -150px;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}

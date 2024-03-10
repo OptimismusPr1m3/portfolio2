@@ -1,0 +1,96 @@
+<div [class.bar-opened]="barIsOpen">
+  <a href="#" class="prename-container">
+    <p>S</p>
+    <p>e</p>
+    <p>b</p>
+    <p>a</p>
+    <p>s</p>
+    <p>t</p>
+    <p class="i-letter-styling">i</p>
+    <p>a</p>
+    <p class="n-letter-styling">n</p>
+  </a>
+  <img
+    (click)="emitCloseBarEvent()"
+    *ngIf="barIsOpen"
+    src="assets/images/icons/cross-menu.png"
+    class="cross"
+  />
+</div>
+<div class="nav-lang-container">
+  <div *ngIf="!barIsOpen" class="language">
+    <div class="lang-div">
+      <p (click)="changeLang('de')">DE</p>
+      <span [class.active-lang]="isGerLang"></span>
+    </div>
+    <div class="seperator"></div>
+    <div class="lang-div">
+      <p (click)="changeLang('en')">ENG</p>
+      <span [class.active-lang]="isdefaultLang"></span>
+    </div>
+  </div>
+  <div class="links" [class.links-column]="barIsOpen">
+    <div id="aMeDesktop">
+      <a
+        (click)="toggleActiveLink('aboutMe')"
+        [class.active-link]="aboutMe"
+        href="#aboutMe"
+        >{{ lService.header["aboutMe"] }}</a
+      >
+      <div [class.active-underline]="aboutMe"></div>
+    </div>
+
+    <!--For Mobile-->
+    <div id="aMeMobile">
+      <a
+        (click)="toggleActiveLink('aboutMe')"
+        [class.active-link]="aboutMe"
+        href="#aboutMeMobile"
+        >{{ lService.header["aboutMe"] }}</a
+      >
+      <div [class.active-underline]="aboutMe"></div>
+    </div>
+    <!---->
+
+    <div id="skillDesktop">
+      <a
+        (click)="toggleActiveLink('skills')"
+        [class.active-link]="skills"
+        href="#skills"
+        >{{ lService.header["skills"] }}</a
+      >
+      <div [class.active-underline]="skills"></div>
+    </div>
+
+    <!--For Mobile-->
+    <div id="skillMobile">
+      <a
+        (click)="toggleActiveLink('skills')"
+        [class.active-link]="skills"
+        href="#skillsMobile"
+        >{{ lService.header["skills"] }}</a
+      >
+      <div [class.active-underline]="skills"></div>
+    </div>
+    <!---->
+
+    <div>
+      <a
+        (click)="toggleActiveLink('portfolio')"
+        [class.active-link]="portfolio"
+        href="#portfolio"
+        >Portfolio</a
+      >
+      <div [class.active-underline]="portfolio"></div>
+    </div>
+    <div *ngIf="barIsOpen">
+      <a
+        (click)="toggleActiveLink('contact')"
+        [class.active-link]="contact"
+        href="#contact"
+        >{{ lService.header["contact"] }}</a
+      >
+      <div [class.active-underline]="contact"></div>
+    </div>
+  </div>
+</div>

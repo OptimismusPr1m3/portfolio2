@@ -1,0 +1,109 @@
+.head-content {
+  position: sticky;
+
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: #ffffff;
+  background-color: #141d2f;
+  z-index: 100;
+  > .flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  height: 600px;
+}
+
+.mobile-navbar {
+  display: none;
+  margin-right: 90px;
+  @media (max-width: 1110px) {
+    display: flex;
+  }
+  @media (max-width: 900px) {
+    margin-right: 48px;
+  }
+  @media (max-width: 520px) {
+    margin-right: 24px;
+  }
+  > img {
+    &:hover {
+      cursor: pointer;
+    }
+    @media (max-width: 450px) {
+      height: 24px;
+    }
+  }
+}
+
+.navbar {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  background-color: rgba(20, 29, 47, 0.8);
+}
+
+.bar-slideIn {
+  animation: slideIn 0.2s ease-in;
+}
+.bar-slideOut {
+  animation: slideOut 0.2s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    left: 1100px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    left: 0;
+  }
+  to {
+    left: 1100px;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.2s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.1s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

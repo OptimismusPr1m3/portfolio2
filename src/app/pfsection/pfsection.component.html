@@ -1,0 +1,37 @@
+<section class="pf-section fontfam-poppins">
+  <div class="pf-header">
+    <div class="pf-header-transition-cont">
+      <div class="pf-head-transition">
+        <div data-aos="flip-up" data-aos-anchor-placement="bottom-bottom"></div>
+        <h2 data-aos="flip-up" data-aos-anchor-placement="bottom-bottom">Portfolio</h2>
+      </div>
+      <img src="/assets/images/shapes/purple_shadow_pf.png">
+    </div>
+    <p data-aos="flip-up">
+      {{lService.portfolio["samplePhrase1"]}} <br>
+      {{lService.portfolio["samplePhrase2"]}}
+    </p>
+  </div>
+  <div class="portfolio-cards">
+    <div data-aos="zoom-in-up" class="projects-cards" *ngFor="let card of portfolioImages; let i = index">
+      <img src="{{card}}">
+      <div class="overlay">
+        <div class="git-live-link">
+          <a class="git-link" href="{{portfolioGitLinks[i]}}" [target]="'_blank'">Github</a>
+          <a class="live-link" href="{{portfolioLiveLinks[i]}}" [target]="'_blank'">Live test</a>
+        </div>
+        <div class="pf-info-cont">
+          <h4>{{portfolioTitles[i]}}</h4>
+          <p *ngIf="lService.selectedLanguage.language === 'en'">{{portfolioInfosEN[i]}}</p>
+          <p *ngIf="lService.selectedLanguage.language === 'de'"> {{portfolioInfosDE[i]}}</p>
+          <div class="used-tech">
+            <p>{{portfolioTech[i]}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pf-orange-shadow">
+    <img src="/assets/images/shapes/orange_pf_shadow.png">
+  </div>
+</section>

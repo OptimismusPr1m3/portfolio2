@@ -1,0 +1,60 @@
+<section class="skills-content fontfam-poppins">
+  <div class="code-icons">
+    <div class="icons-row">
+      <div data-aos="fade-down"
+        class="icon-with-text"
+        *ngFor="let icon of iconsFirstRow; let i = index"
+      >
+        <img src="{{ icon }}" />
+        <p>{{ iconsNamesFirst[i] }}</p>
+      </div>
+    </div>
+    <div class="icons-row">
+      <div data-aos="fade-up"
+        class="icon-with-text"
+        *ngFor="let icon of iconsSecondRow; let i = index"
+      >
+        <img src="{{ icon }}" />
+        <p>{{ iconsNamesSecond[i] }}</p>
+      </div>
+    </div>
+    <div class="icons-row">
+      <div data-aos="fade-down"
+        class="icon-with-text"
+        *ngFor="let icon of iconsThirdRow; let i = index"
+      >
+        <img src="{{ icon }}" />
+        <p>{{ iconsNamesThird[i] }}</p>
+      </div>
+    </div>
+    <div class="icons-row">
+      <div data-aos="fade-up" class="icon-with-text">
+        <img src="/assets/images/icons/material_design.png" />
+        <p>Material design</p>
+      </div>
+    </div>
+    <a
+      id="skillsBtnMobile"
+      href="#contact"
+      style="display: none"
+      class="skills-btn"
+    >
+      <button>Get in touch</button>
+    </a>
+  </div>
+
+  <div data-aos="fade-up" class="skills-head">
+    <div class="skills-transition">
+      <h2>Skills</h2>
+      <div class="purple-transition-line"></div>
+    </div>
+    <div class="skills-quote">
+      <p>
+        {{lService.skills['p1']}}
+      </p>
+    </div>
+    <a id="skillsBtn" href="#contact" class="skills-btn">
+      <button>Get in touch</button>
+    </a>
+  </div>
+</section>
