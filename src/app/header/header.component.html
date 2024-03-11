@@ -3,7 +3,7 @@
   <div (click)="toggleNavBar()" class="mobile-navbar" *ngIf="!barOpened">
     <img src="assets/images/icons/burger-menu.png">
   </div>
-  <div *ngIf="barOpened" [class.bar-slideIn]="barWasOpened" [class.bar-slideOut]="barWasClosed" class="navbar">
-    <app-headertemplate (barHasClosed)="handleBarClosing($event)" [barIsOpen]="barOpened"  class="column"></app-headertemplate>
+  <div [class.d-none]="!barOpened" [class.bar-slideIn]="barWasOpened" [class.bar-slideOut]="barWasClosed" class="navbar">
+    <app-headertemplate (barHasClosed)="handleBarClosing($event)" [barIsOpen]="barOpened" class="column"></app-headertemplate>
   </div>
 </section>

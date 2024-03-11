@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { LanguageService } from '../service/language.service';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+
 
 @Component({
   selector: 'app-pfsection',
@@ -13,9 +12,7 @@ import 'aos/dist/aos.css';
 })
 export class PfsectionComponent {
 
-  ngOnInit() {
-    Aos.init();
-  }
+  
   portfolioImages: string[] = [
     '/assets/images/projectframes/Sharkie.png',
     '/assets/images/projectframes/Join.png',

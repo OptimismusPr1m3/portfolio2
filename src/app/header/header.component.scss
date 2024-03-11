@@ -57,6 +57,10 @@
   background-color: rgba(20, 29, 47, 0.8);
 }
 
+.d-none {
+  display: none !important;
+}
+
 .bar-slideIn {
   animation: slideIn 0.2s ease-in;
 }

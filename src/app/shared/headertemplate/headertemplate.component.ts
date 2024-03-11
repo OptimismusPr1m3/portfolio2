@@ -11,14 +11,15 @@ import { LanguageService } from '../../service/language.service';
   styleUrl: './headertemplate.component.scss'
 })
 export class HeadertemplateComponent {
-  aboutMe: boolean = false;
-  skills: boolean = false;
-  portfolio: boolean = false;
-  contact: boolean = false;
+  aboutMe: boolean | undefined;
+  skills: boolean | undefined;
+  portfolio: boolean | undefined;
+  contact: boolean | undefined;
   isdefaultLang: boolean = true;
   isGerLang: boolean = false;
 
   @Input() barIsOpen: boolean | undefined;
+  @Input() activeLink: string | undefined;
   @Output() barHasClosed: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   toggleActiveLink(aCategoryName: string) {
@@ -26,7 +27,7 @@ export class HeadertemplateComponent {
     this.skills = aCategoryName === 'skills';
     this.portfolio = aCategoryName === 'portfolio';
     this.contact = aCategoryName === 'contact';
-    //this.emitCloseBarEvent();
+    this.emitCloseBarEvent();
   }
 
   emitCloseBarEvent() {

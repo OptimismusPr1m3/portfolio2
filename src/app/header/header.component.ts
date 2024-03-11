@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeadertemplateComponent } from '../shared/headertemplate/headertemplate.component';
 
 @Component({
@@ -10,20 +10,12 @@ import { HeadertemplateComponent } from '../shared/headertemplate/headertemplate
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  
-  aboutMe: boolean = false;
-  skills: boolean = false;
-  portfolio: boolean = false;
+
   barOpened: boolean = false;
   barWasOpened: boolean = false;
   barWasClosed: boolean = false;
 
   constructor() {}
-  toggleActiveLink(aCategoryName: string) {
-    this.aboutMe = aCategoryName === 'aboutMe';
-    this.skills = aCategoryName === 'skills';
-    this.portfolio = aCategoryName === 'portfolio';
-  }
   toggleNavBar() {
     this.barWasClosed = false;
     this.barOpened = true;

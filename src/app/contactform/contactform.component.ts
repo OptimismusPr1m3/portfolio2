@@ -3,8 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, NgModule, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { LanguageService } from '../service/language.service';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-contactform',
@@ -21,10 +19,6 @@ export class ContactformComponent {
   isInvalidMail: boolean = false;
   isInvalidMessage: boolean = false;
   pPolicy: boolean = false;
-
-  ngOnInit() {
-    Aos.init()
-  }
 
   contactData = {
     name: "",
