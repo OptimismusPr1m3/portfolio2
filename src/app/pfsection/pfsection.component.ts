@@ -30,11 +30,11 @@ export class PfsectionComponent {
     'https://sebastian-wolff.developerakademie.net/Join/login_index.html',
     'https://sebastian-wolff.developerakademie.net/Pok%C3%A9dex/index.html',
   ];
-  portfolioTitles: string[] = ['Sharkie', 'Join', 'Pokedéx', 'Placeholder'];
+  portfolioTitles: string[] = ['Sharkie', 'Join', 'Pokédex', 'Placeholder'];
   portfolioInfosEN: string[] = [
     'Take on the role of Sharkie, a brave little white shark, as you navigate through treacherous waters filled with enemies. But beware, the ultimate showdown awaits as you face off against the mighty great white shark.',
     'Welcome to Join, your collaborative Kanban board designed for group productivity! With Join, you can sign up and gain instant access to your personalized task dashboard, where you will find all your assignments neatly organized.',
-    'Introducing my Pokedex, powered by the PokeAPI! Explore, search, and learn about Pokemon with ease. Dive into stats and attacks for each Pokemon. The ultimate companion for Pokemon enthusiasts!',
+    'Introducing my Pokédex, powered by the PokeAPI! Explore, search, and learn about Pokémon with ease. Dive into stats and attacks for each Pokémon. The ultimate companion for Pokémon enthusiasts!',
     //'Placeholder',
   ];
   portfolioInfosDE: string[] = [

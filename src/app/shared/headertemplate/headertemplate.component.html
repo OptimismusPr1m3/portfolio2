@@ -10,12 +10,12 @@
     <p>a</p>
     <p class="n-letter-styling">n</p>
   </a>
-  <img
+  <div
     (click)="emitCloseBarEvent()"
     *ngIf="barIsOpen"
-    src="assets/images/icons/cross-menu.png"
-    class="cross"
-  />
+    
+    class="cross">
+  </div>
 </div>
 <div class="nav-lang-container">
   <div *ngIf="!barIsOpen" class="language">

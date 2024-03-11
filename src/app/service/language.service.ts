@@ -112,7 +112,9 @@ export class LanguageService {
     inquiryPhrase1: '',
     inquiryPhrase2: '',
   };
-  pPolicy_5: { [key: string]: string } = {};
+  footer: { [key: string]: string } = {
+    imprint: ''
+  };
 
   selectedLanguage = i18next;
 
@@ -407,6 +409,9 @@ export class LanguageService {
               Mandatory legal provisions - especially statutory retention periods -
               remain unaffected.`,
             },
+            footer: {
+              imprint: 'Imprint'
+            }
           },
         },
         de: {
@@ -449,11 +454,11 @@ export class LanguageService {
             },
             contactSection: {
               cHead: 'Kontakt',
-              problemHead: 'Haben Sie ein Problem zu lösen?',
+              problemHead: 'Müssen Sie ein Problem lösen?',
               fillerP11:
-                'ontaktieren Sie mich über dieses Formular. Ich bin daran interessiert,',
+                'Kontaktieren Sie mich über dieses Formular. Ich bin interessiert, von',
               fillerP12:
-                'von Ihnen zu hören, Ihre Ideen kennenzulernen und durch',
+                'Ihnen zu hören, Ihre Ideen kennenzulernen und durch',
               fillerP13: 'meine Arbeit zu Ihren Projekten beizutragen.',
               fillerP21: 'Brauchen Sie einen Frontend-Entwickler?',
               fillerP22: 'Kontaktieren Sie mich!',
@@ -679,6 +684,9 @@ export class LanguageService {
               (z. B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen –
               insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt.`,
             },
+            footer: {
+              imprint: 'Impressum'
+            }
           },
         },
       },
@@ -693,6 +701,7 @@ export class LanguageService {
     this.setAreaLang(this.pPolicy_2, 'pPolicy_2');
     this.setAreaLang(this.pPolicy_3, 'pPolicy_3');
     this.setAreaLang(this.pPolicy_4, 'pPolicy_4');
+    this.setAreaLang(this.footer, 'footer');
   }
 
   setAreaLang(area: { [key: string]: string }, langArea: string) {
@@ -713,5 +722,6 @@ export class LanguageService {
     this.setAreaLang(this.pPolicy_2, 'pPolicy_2');
     this.setAreaLang(this.pPolicy_3, 'pPolicy_3');
     this.setAreaLang(this.pPolicy_4, 'pPolicy_4');
+    this.setAreaLang(this.footer, 'footer');
   }
 }
