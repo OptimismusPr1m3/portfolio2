@@ -12,20 +12,20 @@ import { LanguageService } from '../service/language.service';
   styleUrl: './contactform.component.scss',
 })
 export class ContactformComponent {
-
   http = inject(HttpClient);
 
   isInvalidName: boolean = false;
   isInvalidMail: boolean = false;
   isInvalidMessage: boolean = false;
   pPolicy: boolean = false;
+  messageSent: boolean = false;
 
   contactData = {
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   };
-  
+
   post = {
     endPoint: 'https://bastian-wolff.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -39,23 +39,29 @@ export class ContactformComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid && ngForm.submitted) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
-        next: (response: any) => {
-          console.log(response)
-          ngForm.resetForm();
-        },
-        error: (error: any) => {
-          console.error(error);
-        },
-        complete: () => console.info('send post complete'),
-      })
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response: any) => {
+            console.log(response);
+            this.messageSent = true;
+            ngForm.resetForm();
+          },
+          error: (error: any) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
     } else if (!ngForm.valid && ngForm.submitted) {
       this.checkNameValidation();
       this.checkEmailValidation();
       this.checkMessageValidation();
     }
+    setTimeout(() => {
+      this.messageSent = false;
+    }, 2400);
   }
-  
+
   checkMessageValidation() {
     if (this.contactData.message == '') {
       this.isInvalidMessage = true;
@@ -74,5 +80,5 @@ export class ContactformComponent {
     }
   }
 
-  constructor(public lService: LanguageService){}
+  constructor(public lService: LanguageService) {}
 }

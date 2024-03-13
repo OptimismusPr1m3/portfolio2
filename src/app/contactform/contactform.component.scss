@@ -466,3 +466,45 @@ input:-internal-autofill-selected {
     display: none;
   }
 }
+
+/*Sent Message*/
+.message-sent {
+  display: flex;
+  height: 0px;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  
+}
+
+.message {
+  position: relative;
+  font-size: 28px;
+  color: #e86f00;
+  opacity: 0;
+  top: -10px;
+  animation: fadeIn 2125ms ease-in-out;
+  @media (max-width:450px) {
+    font-size: 24px;
+  }
+  @keyframes fadeIn {
+    0% {
+      top: -10px;
+      opacity: 0;
+    }
+    50% {
+      top: -150px;
+      opacity: 1;
+    }
+    75% {
+      top: -150px;
+      opacity: 1;
+      
+    }
+    100% {
+      top: -10;
+      opacity: 0;
+    }
+  }
+}
+

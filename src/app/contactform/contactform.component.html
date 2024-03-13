@@ -95,6 +95,9 @@
                 lService.contactSection["warn3"]
               }}</span>
               }
+              <div *ngIf="messageSent" class="message-sent">
+                <span [class.message]="messageSent">{{ lService.contactSection['mSent'] }}</span>
+              </div>
             </div>
             <div
               data-aos="flip-up"

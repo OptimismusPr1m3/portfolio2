@@ -21,7 +21,7 @@ export class PfsectionComponent {
   ];
   portfolioGitLinks: string[] = [
     'https://github.com/OptimismusPr1m3/JumpNRun_Sparkie',
-    'https://github.com/StephanieWetzel/Join',
+    'https://github.com/OptimismusPr1m3/Join',
     'https://github.com/OptimismusPr1m3/Pokedex',
     //'https://github.com/OptimismusPr1m3/JumpNRun_Sparkie',
   ];

@@ -40,6 +40,7 @@ export class LanguageService {
     placeHolder1: '',
     placeHolder2: '',
     placeHolder3: '',
+    mSent: '',
   };
   imprint: { [key: string]: string } = {
     head: '',
@@ -176,6 +177,7 @@ export class LanguageService {
               placeHolder1: 'Your Name',
               placeHolder2: 'Your email',
               placeHolder3: 'Your message',
+              mSent: 'Message sent !',
             },
             imprint: {
               head: 'Imprint',
@@ -471,6 +473,7 @@ export class LanguageService {
               placeHolder1: 'Ihr Name',
               placeHolder2: 'Ihre Email',
               placeHolder3: 'Ihre Nachricht',
+              mSent: 'Gesendet !',
             },
             imprint: {
               head: 'Impressum',
