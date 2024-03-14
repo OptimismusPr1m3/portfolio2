@@ -3,17 +3,21 @@
   flex-direction: column;
   background-color: #141d2f;
   color: #ffffff;
-  > .purple-desktop {
-    overflow: hidden;
-    position: absolute;
-    top: 210%;
-    right: -353px;
-    @media (max-width: 1450px) {
-      top: 274%;
-      right: -400px;
-    }
-    @media (max-width: 1250px) {
-      display: none;
+  scroll-margin-top: 80px;
+  > .purple-container {
+    position: relative;
+    overflow-x: clip;
+    > .purple-desktop {
+      position: absolute;
+      top: 210%;
+      right: -353px;
+      @media (max-width: 1450px) {
+        top: 274%;
+        right: -400px;
+      }
+      @media (max-width: 1250px) {
+        display: none;
+      }
     }
   }
   > .pf-header {
@@ -30,21 +34,21 @@
       max-width: 1920px;
       overflow: hidden;
       background-color: #141d2f;
-      @media(max-width: 1250px) {
+      @media (max-width: 1250px) {
         margin-top: -180px;
-        justify-content: space-between;   
-       }
-      @media(max-width: 850px) {
-        height: 900px;   
-       }
+        justify-content: space-between;
+      }
+      @media (max-width: 850px) {
+        height: 900px;
+      }
       > .pf-head-transition {
         display: flex;
         flex-direction: row;
         align-items: center;
-        @media(max-width: 1250px) {
-          margin-top: -250px;   
-         }
-        
+        @media (max-width: 1250px) {
+          margin-top: -250px;
+        }
+
         > div {
           height: 5px;
           width: 80px;
@@ -101,8 +105,8 @@
         @media (max-width: 1400px) {
           font-size: 15px;
         }
-        @media(max-width: 1250px) {
-          margin-top: -480px;   
+        @media (max-width: 1250px) {
+          margin-top: -480px;
         }
         @media (max-width: 900px) {
           margin-left: 48px;
@@ -129,9 +133,9 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    @media(max-width: 1250px) {
-      margin-top: -350px;   
-     }
+    @media (max-width: 1250px) {
+      margin-top: -350px;
+    }
     > .cards-wrapped {
       display: flex;
       width: 100%;
@@ -152,8 +156,11 @@
         @media (max-width: 1320px) {
           justify-content: center;
         }
+        @media (max-width: 1250px) {
+          margin-top: 24px;
+        }
         @media (max-width: 850px) {
-          margin-top: 64px;
+          margin-top: -24px;
         }
         @media (max-width: 700px) {
           margin-left: 48px;
@@ -162,6 +169,7 @@
         @media (max-width: 520px) {
           margin-left: 24px;
           margin-right: 24px;
+          margin-top: -48px;
         }
         background-color: #141d2f;
         > .projects-cards {
@@ -366,9 +374,9 @@
     display: flex;
     right: -380px;
   }
-  @media(max-width: 1100px) {  
-    right: -232px;;
-   }
+  @media (max-width: 1100px) {
+    right: -232px;
+  }
   @media (max-width: 920px) {
     right: -50px;
   }
