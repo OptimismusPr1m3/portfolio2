@@ -3,6 +3,7 @@
   justify-content: center;
   background-color: #141d2f;
   width: 100%;
+  padding-bottom: 48px;
   > .wrapper {
     width: 100%;
     max-width: 1680px;
@@ -22,6 +23,7 @@
       height: 60vh;
     }
     @media (max-width: 520px) {
+      padding-top: 48px;
       padding-left: 24px;
       padding-right: 24px;
       height: auto;
