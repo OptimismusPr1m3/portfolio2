@@ -317,6 +317,7 @@
 .prename-cont p:nth-child(14) {
   animation-delay: 1.9s;
 }
+
 @keyframes dropInName {
   0% {
     transform: translateY(150px) scaleY(0.9s);
@@ -376,11 +377,14 @@
   }
 }
 
-/*Frontend Animation*/
+/*Fullstack Animation*/
 
 .frontend-cont p {
   opacity: 0;
   animation: dropInFrontend 0.4s linear forwards;
+}
+.frontend-cont p:nth-child(18) {
+  animation-delay: 1.8s;
 }
 .frontend-cont p:nth-child(17) {
   animation-delay: 1.9s;
