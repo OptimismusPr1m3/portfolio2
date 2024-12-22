@@ -11,4 +11,9 @@ import { LanguageService } from '../service/language.service';
 })
 export class PrivacyPolicyComponent {
   constructor(public lService: LanguageService){}
+
+  ngOnInit() {
+    window.scrollTo(0,0)
+  }
+
 }
