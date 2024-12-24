@@ -24,14 +24,14 @@ export class PfsectionComponent {
     'https://github.com/OptimismusPr1m3/videoflix_front',
     'https://github.com/OptimismusPr1m3/DABubble_group',
     'https://github.com/OptimismusPr1m3/JumpNRun_Sparkie',
-    'https://github.com/OptimismusPr1m3/Join',
+    'https://github.com/OptimismusPr1m3/Join_b_end_frontend',
     //'https://github.com/OptimismusPr1m3/Pokedex',
   ];
   portfolioLiveLinks: string[] = [
     'https://bastian-wolff.de/videoflix/',
     'https://bastian-wolff.de/bubble/',
     'https://bastian-wolff.de/JumpNRun_SParkie/index.html',
-    'https://bastian-wolff.de/Join/login_index.html',
+    'https://bastian-wolff.de/Join/index.html',
     //'https://bastian-wolff.de/Pok%C3%A9dex/index.html',
   ];
   portfolioTitles: string[] = [`VideoFlix`,'DABubble', 'Sharkie', 'Join'];
@@ -53,7 +53,7 @@ export class PfsectionComponent {
     'Angular | Django | POSTGRESQL | SCSS',
     'Angular | Firebase | SCSS',
     'JavaScript | HTML | CSS',
-    'JavaScript | HTML | CSS',
+    'JavaScript | Python | Django | API',
     //'JavaScript | HTML | CSS | API',
   ];
 
