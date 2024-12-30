@@ -132,21 +132,21 @@ export class LanguageService {
               contact: 'Contact',
             },
             aboutMe: {
-              p1: `Hi, I am a Front-end developer based in Thüringen, Germany. I'm specialized in
+              p1: `Hi, I am a Fullstack Developer based in Thüringen, Germany. I'm specialized in
                 bringing ideas to life for designers and companies. Creativity and logical
                 thinking are my strengths in connecting concepts to quality products. If you
                 believe I'd be a good fit for your projects, feel free to get in touch!`,
               p2: `Since 2022, I've been enrolled in a part-time Bachelor's program in
                 "Informatik", immersing myself in the diverse aspects of technology.
                 Currently, I'm also undergoing an intensive Bootcamp program specializing in
-                Frontend Development, aiming to further refine my practical skills and
+                Fullstack Development, aiming to further refine my practical skills and
                 accelerate my growth. This dual educational journey has equipped me with a
                 good theoretical foundation and strong practical insights into current
                 industry practices.`,
               p3: `My nursing background since 2016 has enhanced my teamwork and adaptability
                 skills. Working in healthcare emphasized collaboration, communication, and
                 staying composed under pressure. These qualities, along with empathy and
-                problem-solving abilities, are assets I bring to my role as a Frontend
+                problem-solving abilities, are assets I bring to my role as a Fullstack
                 Developer, ensuring effective collaboration and client-focused project
                 delivery.`,
             },
@@ -424,7 +424,7 @@ export class LanguageService {
               contact: 'Kontakt',
             },
             aboutMe: {
-              p1: `Hallo, ich bin ein Frontend-Entwickler
+              p1: `Hallo, ich bin ein Fullstack-Entwickler
               mit Sitz in Thüringen, Deutschland. Ich habe mich darauf spezialisiert,
               Ideen für Designer und Unternehmen zum Leben zu erwecken. Kreativität und
               logisches Denken sind meine Stärken, um Konzepte in hochwertige Produkte
@@ -433,7 +433,7 @@ export class LanguageService {
               p2: `Seit 2022 bin ich eingeschrieben in einem Teilzeit-Bachelorstudium
               "Informatik", wo ich mich intensiv mit den vielfältigen Aspekten der
               Technologien beschäftige. Derzeit absolviere ich ebenfalls ein intensives
-              Bootcamp-Programm mit Schwerpunkt auf der Frontend-Entwicklung, um meine
+              Bootcamp-Programm mit Schwerpunkt auf Fullstack-Entwicklung, um meine
               praktischen Fähigkeiten weiter zu verfeinern und mein Wachstum in diesem
               Bereich zu beschleunigen. Diese duale Ausbildung hat mir eine solide
               theoretische Grundlage und fundierte praktische Einblicke in aktuelle
@@ -442,7 +442,7 @@ export class LanguageService {
               Anpassungsfähigkeiten verbessert. Die Arbeit im Gesundheitswesen betonte die
               Zusammenarbeit, Kommunikation und Ruhe in stressigen Situationen. Diese
               Eigenschaften, zusammen mit Empathie und Problemlösungsfähigkeiten, sind
-              Werte, die ich in meine Rolle als Frontend-Entwickler einbringe und eine
+              Werte, die ich in meine Rolle als Fullstack-Entwickler einbringe und eine
               effektive Zusammenarbeit und kundenorientierte Projektabwicklung
               sicherstelle.`,
             },
