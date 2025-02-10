@@ -132,23 +132,19 @@ export class LanguageService {
               contact: 'Contact',
             },
             aboutMe: {
-              p1: `Hi, I am a Fullstack Developer based in Thüringen, Germany. I'm specialized in
-                bringing ideas to life for designers and companies. Creativity and logical
-                thinking are my strengths in connecting concepts to quality products. If you
-                believe I'd be a good fit for your projects, feel free to get in touch!`,
-              p2: `Since 2022, I've been enrolled in a part-time Bachelor's program in
-                "Informatik", immersing myself in the diverse aspects of technology.
-                Currently, I'm also undergoing an intensive Bootcamp program specializing in
-                Fullstack Development, aiming to further refine my practical skills and
-                accelerate my growth. This dual educational journey has equipped me with a
-                good theoretical foundation and strong practical insights into current
-                industry practices.`,
-              p3: `My nursing background since 2016 has enhanced my teamwork and adaptability
-                skills. Working in healthcare emphasized collaboration, communication, and
-                staying composed under pressure. These qualities, along with empathy and
-                problem-solving abilities, are assets I bring to my role as a Fullstack
-                Developer, ensuring effective collaboration and client-focused project
-                delivery.`,
+              p1: `Hi, I'm a Fullstack Developer based in Thuringia, Germany with a strong focus on writing efficient, 
+                well-structured code while keeping the bigger picture in mind.`,
+
+              p2: `My background in healthcare has sharpened my problem-solving skills, 
+                my ability to work effectively in teams, and my ability to stay focused under pressure. 
+                These qualities, along with empathy, enable me to collaborate effectively 
+                and deliver client-focused solutions as a Fullstack Developer.`,
+
+              p3: `To deepen my expertise, I successfully completed a TÜV-certified Fullstack
+                Development program at the Developer Akademie, complementing my ongoing studies 
+                in Computer Science. Through both team-based and individual projects, I've gained 
+                hands-on experience in developing engaging web applications while following best 
+                practices and collaborating with experienced developers.`,
             },
             skills: {
               p1: `I have gained experience in building projects with various front end
@@ -424,27 +420,19 @@ export class LanguageService {
               contact: 'Kontakt',
             },
             aboutMe: {
-              p1: `Hallo, ich bin ein Fullstack-Entwickler
-              mit Sitz in Thüringen, Deutschland. Ich habe mich darauf spezialisiert,
-              Ideen für Designer und Unternehmen zum Leben zu erwecken. Kreativität und
-              logisches Denken sind meine Stärken, um Konzepte in hochwertige Produkte
-              umzusetzen. Wenn Sie glauben, dass ich gut zu Ihren Projekten passen könnte,
-              zögern Sie nicht, sich mit mir in Verbindung zu setzen!`,
-              p2: `Seit 2022 bin ich eingeschrieben in einem Teilzeit-Bachelorstudium
-              "Informatik", wo ich mich intensiv mit den vielfältigen Aspekten der
-              Technologien beschäftige. Derzeit absolviere ich ebenfalls ein intensives
-              Bootcamp-Programm mit Schwerpunkt auf Fullstack-Entwicklung, um meine
-              praktischen Fähigkeiten weiter zu verfeinern und mein Wachstum in diesem
-              Bereich zu beschleunigen. Diese duale Ausbildung hat mir eine solide
-              theoretische Grundlage und fundierte praktische Einblicke in aktuelle
-              Branchenpraktiken verschafft.`,
-              p3: `Mein Hintergrund als Krankenpfleger hat meine Teamarbeit- und
-              Anpassungsfähigkeiten verbessert. Die Arbeit im Gesundheitswesen betonte die
-              Zusammenarbeit, Kommunikation und Ruhe in stressigen Situationen. Diese
-              Eigenschaften, zusammen mit Empathie und Problemlösungsfähigkeiten, sind
-              Werte, die ich in meine Rolle als Fullstack-Entwickler einbringe und eine
-              effektive Zusammenarbeit und kundenorientierte Projektabwicklung
-              sicherstelle.`,
+              p1: `Hallo, ich bin ein Fullstack-Entwickler mit Sitz in Thüringen, Deutschland. Mein Fokus liegt darauf, 
+              effizienten, gut strukturierten Code zu schreiben, ohne das große Ganze aus den Augen zu verlieren.`,
+
+              p2: `Mein Hintergrund im Gesundheitswesen hat meine Fähigkeit zur Problemlösung, meine Teamarbeit 
+              und meine Fähigkeit geschärft, auch unter Druck fokussiert zu bleiben. Diese Eigenschaften, 
+              zusammen mit Empathie, ermöglichen mir eine effektive Zusammenarbeit und die Entwicklung 
+              kundenorientierter Lösungen als Fullstack-Entwickler.`,
+
+              p3: `Um meine Expertise zu vertiefen, habe ich ein intensives Fullstack-Development-Programm 
+              an der TÜV-zertifizierten Developer Akademie abgeschlossen, als Ergänzung zu meinem laufenden 
+              Informatikstudium. Durch Team- und Einzelprojekte konnte ich wertvolle Praxiserfahrungen in 
+              der Entwicklung ansprechender Web-Applikationen sammeln, Best Practices anwenden und mit 
+              erfahrenen Entwicklern zusammenarbeiten.`,
             },
             skills: {
               p1: `Ich habe Erfahrung im Aufbau von Projekten mit verschiedenen
