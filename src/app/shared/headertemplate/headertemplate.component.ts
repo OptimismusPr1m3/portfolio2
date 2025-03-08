@@ -15,8 +15,8 @@ export class HeadertemplateComponent {
   skills: boolean | undefined;
   portfolio: boolean | undefined;
   contact: boolean | undefined;
-  isdefaultLang: boolean = true;
-  isGerLang: boolean = false;
+  isdefaultLang: boolean = false; // eng lang
+  isGerLang: boolean = true; // ger lang
 
   @Input() barIsOpen: boolean | undefined;
   @Input() activeLink: string | undefined;

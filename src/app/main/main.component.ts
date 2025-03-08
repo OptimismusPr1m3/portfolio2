@@ -12,7 +12,6 @@ import { AboutMeMobileComponent } from '../about-me-mobile/about-me-mobile.compo
   standalone: true,
   imports: [
     CommonModule,
-    HeaderComponent,
     WelcomeComponent,
     AboutmeComponent,
     PfsectionComponent,

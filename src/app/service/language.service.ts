@@ -121,7 +121,7 @@ export class LanguageService {
 
   constructor() {
     i18next.init({
-      lng: 'en',
+      lng: 'de',
       debug: false,
       resources: {
         en: {
@@ -436,22 +436,22 @@ export class LanguageService {
             },
             skills: {
               p1: `Ich habe Erfahrung im Aufbau von Projekten mit verschiedenen
-              Frontend-Technologien und Konzepten gesammelt.`,
+              Front und Backend-Technologien und Konzepten gesammelt.`,
             },
             portfolio: {
-              samplePhrase1: `Dieser Bereich ist ein Beispiel meiner Arbeit!`,
-              samplePhrase2: `Scrolle nach unten, um weitere Projekte anzusehen, die ich entwickelt habe.`,
+              samplePhrase1: `Hier findet man eine Auswahl meiner besten Projekte.`,
+              samplePhrase2: `Schau dich um und entdecke, was ich als Fullstack-Entwickler so draufhabe.`,
             },
             contactSection: {
               cHead: 'Kontakt',
-              problemHead: 'Müssen Sie ein Problem lösen?',
+              problemHead: 'Habe Sie ein Problem, das Sie lösen wollen?',
               fillerP11:
-                'Kontaktieren Sie mich über dieses Formular. Ich bin interessiert, von',
+                'Schreiben Sie mir einfach über dieses Formular.',
               fillerP12:
-                'Ihnen zu hören, Ihre Ideen kennenzulernen und durch',
-              fillerP13: 'meine Arbeit zu Ihren Projekten beizutragen.',
-              fillerP21: 'Brauchen Sie einen Frontend-Entwickler?',
-              fillerP22: 'Kontaktieren Sie mich!',
+                'Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen kennenzulernen und',
+              fillerP13: 'Ihre Projekte mit meiner Arbeit zu unterstützen.',
+              fillerP21: 'Suchen Sie einen Fullstack Entwickler?',
+              fillerP22: 'Dann kontaktieren Sie mich!',
               warn1: 'Ihr Name ist erforderlich!',
               warn2: 'Ihre Email ist erforderlich!',
               warn3: 'Bitte geben Sie eine Nachricht ein!',
