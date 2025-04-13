@@ -256,8 +256,9 @@
             align-items: center;
             > .git-live-link {
               display: flex;
-              flex-direction: row;
-              justify-content: space-between;
+              flex-direction: column;
+              justify-content: center;
+              gap: 16px;
               width: 50%;
               align-items: center;
               height: 45%;
@@ -270,35 +271,70 @@
               @media (max-width: 370px) {
                 width: 96%;
               }
-              > a {
-                text-decoration: none;
-                color: #ffffff;
-                font-size: 24px;
-                width: 120px;
-                height: 40px;
-                text-align: center;
-                padding-top: 8px;
-                @media (max-width: 600px) {
-                  font-size: 20px;
+              > .git-live-link-cont {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                > a {
+                  text-decoration: none;
+                  color: #ffffff;
+                  font-size: 24px;
+                  width: 120px;
+                  height: 40px;
+                  text-align: center;
+                  padding-top: 8px;
+                  @media (max-width: 600px) {
+                    font-size: 20px;
+                  } 
+                }
+                > .git-link {
+                  border: 2px solid #e86f00;
+                  border-radius: 12px;
+                  &:hover {
+                    background-color: #d61ce6;
+                    border: 2px solid #d61ce6;
+                  }
+                }
+                > .live-link {
+                  border: 2px solid #e86f00;
+                  background-color: #e86f00;
+                  border-radius: 12px;
+                  &:hover {
+                    background-color: #ff4747;
+                    border: 2px solid #ff4747;
+                  }
                 }
               }
-              > .git-link {
-                border: 2px solid #e86f00;
-                border-radius: 12px;
-                &:hover {
-                  background-color: #d61ce6;
+              > .old-version {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                > a {
+                  text-decoration: none;
+                  color: #ffffff;
+                  font-size: 24px;
+                  width: 120px;
+                  height: 40px;
+                  text-align: center;
+                  padding-top: 8px;
+                  @media (max-width: 600px) {
+                    font-size: 20px;
+                  } 
+                }
+                > .live-link {
+                  width: 100%;
                   border: 2px solid #d61ce6;
+                  background-color: #d61ce6;
+                  border-radius: 12px;
+                  &:hover {
+                    background-color:#e86f00 ;
+                    border: 2px solid #e86f00;
+                  }
                 }
               }
-              > .live-link {
-                border: 2px solid #e86f00;
-                background-color: #e86f00;
-                border-radius: 12px;
-                &:hover {
-                  background-color: #ff4747;
-                  border: 2px solid #ff4747;
-                }
-              }
+             
             }
             > .pf-info-cont {
               height: 55%;

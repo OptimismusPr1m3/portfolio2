@@ -1,6 +1,5 @@
-
 <section ontouchmove id="portfolio" class="pf-section fontfam-poppins">
-  <div  class="purple-container">
+  <div class="purple-container">
     <img
       class="purple-desktop"
       src="/assets/images/shapes/purple_shadow_pf.png"
@@ -14,7 +13,7 @@
           Portfolio
         </h2>
       </div>
-      <img 
+      <img
         class="purple-mobile"
         src="/assets/images/shapes/purple_shadow_pf.png"
       />
@@ -37,19 +36,38 @@
           <img src="{{ card }}" />
           <div class="overlay">
             <div class="git-live-link">
-              <a
-                class="git-link"
-                href="{{ portfolioGitLinks[i] }}"
-                [target]="'_blank'"
-                >Github</a
-              >
-              <a 
-                class="live-link"
-                href="{{ portfolioLiveLinks[i] }}"
-                [target]="'_blank'"
-                >Live test</a
-              >
+              <div class="git-live-link-cont">
+                <a
+                  class="git-link"
+                  href="{{ portfolioGitLinks[i] }}"
+                  [target]="'_blank'"
+                  >Github</a
+                >
+                <a
+                  class="live-link"
+                  href="{{ portfolioLiveLinks[i] }}"
+                  [target]="'_blank'"
+                  >Live test</a
+                >
+              </div>
+              <div class="old-version" *ngIf="i === 2">
+                <a
+                  [target]="'_blank'"
+                  *ngIf="lService.selectedLanguage.language === 'en'"
+                  class="live-link"
+                  href="{{ oldSharkieLink }}"
+                  >Previous version</a
+                >
+                <a
+                  [target]="'_blank'"
+                  *ngIf="lService.selectedLanguage.language !== 'en'"
+                  class="live-link"
+                  href="{{ oldSharkieLink }}"
+                  >Vorherige Version</a
+                >
+              </div>
             </div>
+
             <div class="pf-info-cont">
               <h4>{{ portfolioTitles[i] }}</h4>
               <p *ngIf="lService.selectedLanguage.language === 'en'">
