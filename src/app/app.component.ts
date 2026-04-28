@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import Aos from 'aos';
-
 
 @Component({
   selector: 'app-root',
@@ -18,10 +17,10 @@ import Aos from 'aos';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'portfolio2';
 
-  ngOnInit() {
-    Aos.init()
+  ngOnInit(): void {
+    Aos.init();
   }
 }

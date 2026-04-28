@@ -2,6 +2,16 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { LanguageService } from '../service/language.service';
 
+interface PortfolioProject {
+  image: string;
+  title: string;
+  gitLink: string;
+  liveLink: string;
+  descEN: string;
+  descDE: string;
+  tech: string;
+  oldVersionLink?: string;
+}
 
 @Component({
   selector: 'app-pfsection',
@@ -11,56 +21,45 @@ import { LanguageService } from '../service/language.service';
   styleUrl: './pfsection.component.scss',
 })
 export class PfsectionComponent {
-
-  oldSharkieLink: string = 'https://bastian-wolff.de/JumpNRun_SParkie/index.html'
-  
-  portfolioImages: string[] = [
-    './assets/images/projectframes/Videoflix.png',
-    './assets/images/projectframes/DABubble.png',
-    '/assets/images/projectframes/Sharkie_NG.png',
-    //'/assets/images/projectframes/Sharkie.png',
-    '/assets/images/projectframes/Join.png',
-    //'/assets/images/projectframes/Pokédex.png',
-  ];
-  portfolioGitLinks: string[] = [
-    'https://github.com/OptimismusPr1m3/videoflix_front',
-    'https://github.com/OptimismusPr1m3/DABubble_group',
-    'https://github.com/OptimismusPr1m3/sharkie_ng_phaser',
-    'https://github.com/OptimismusPr1m3/Join_b_end_frontend',
-    //'https://github.com/OptimismusPr1m3/JumpNRun_Sparkie',
-    //'https://github.com/OptimismusPr1m3/Pokedex',
-  ];
-  portfolioLiveLinks: string[] = [
-    'https://bastian-wolff.de/videoflix/',
-    'https://bastian-wolff.de/bubble/',
-    'https://bastian-wolff.de/sharkie/',
-    'https://bastian-wolff.de/Join/index.html',
-    //'https://bastian-wolff.de/Pok%C3%A9dex/index.html',
-  ];
-  portfolioTitles: string[] = [`VideoFlix`,'DABubble', 'Sharkie', 'Join'];
-  portfolioInfosEN: string[] = [
-    'Stream videos and upload them, inspired by Youtube and Netflix. Discover VideoFLix now ! Database runs on a Raspberry PI5',
-    'Chat messenger inspired by Slack. Stay in contact with colleagues, keep up to date, and share thoughts and ideas.',
-    'Take on the role of Sharkie, a brave little white shark, as you navigate through treacherous waters filled with enemies. Now completely revamped with Angular | Phaser, making it significantly more performant!',
-    'Welcome to Join, your collaborative Kanban board designed for group productivity! With Join, you can sign up and gain instant access to your personalized task dashboard, where you will find all your assignments neatly organized.',
-    //'Introducing my Pokédex, powered by the PokeAPI! Explore, search, and learn about Pokémon with ease. Dive into stats and attacks for each Pokémon. The ultimate companion for Pokémon enthusiasts!',
-  ];
-  portfolioInfosDE: string[] = [
-    'Streamingplatform, inspiriert von Youtube und Netflix. Entdecke VideoFlix jetzt ! Die Datenbank läuft auf einem Raspberry PI5',
-    'Chat-Messenger inspiriert con Slack/Discord. Halte Kontakt zu Kollegen, Freunden oder Bekannten. Bleibe auf dem neuesten Stand und teile deine Gedanken und Ideen.',
-    'Schlüpfe in die Rolle von Sharkie, einem mutigen kleinen weißen Hai, und navigiere durch gefährliche Gewässer voller Feinde. Nun komplett überarbeitet mit Angular | Phaser und somit um ein vielfaches performanter!',
-    'Willkommen bei Join, deinem kollaborativen Kanban-Board, das für Gruppenproduktivität entwickelt wurde! Mit Join kannst du dich anmelden und sofort Zugriff auf dein personalisiertes Aufgaben-Dashboard erhalten, auf dem man all seine Aufgaben organisiert findet.',
-    //'Hier ist mein Pokédex, angetrieben von der PokeAPI! Erkunde, suche und lerne Pokémon spielend leicht kennen. Tauche ein in Statistiken und Attacken für jedes Pokémon. Der ultimative Begleiter für Pokémon-Enthusiasten!',
-  ]
-  portfolioTech: string[] = [
-    'Angular | Django | PostgreSQL | SCSS',
-    'Angular | Firebase | SCSS',
-    'Angular | Phaser | SCSS',
-    // 'JavaScript | HTML | CSS',
-    'JavaScript | Python | Django | API',
-    //'JavaScript | HTML | CSS | API',
+  projects: PortfolioProject[] = [
+    {
+      image: './assets/images/projectframes/Videoflix.png',
+      title: 'VideoFlix',
+      gitLink: 'https://github.com/OptimismusPr1m3/videoflix_front',
+      liveLink: 'https://bastian-wolff.de/videoflix/',
+      descEN: 'Stream videos and upload them, inspired by Youtube and Netflix. Discover VideoFLix now ! Database runs on a Raspberry PI5',
+      descDE: 'Streamingplatform, inspiriert von Youtube und Netflix. Entdecke VideoFlix jetzt ! Die Datenbank läuft auf einem Raspberry PI5',
+      tech: 'Angular | Django | PostgreSQL | SCSS',
+    },
+    {
+      image: './assets/images/projectframes/DABubble.png',
+      title: 'DABubble',
+      gitLink: 'https://github.com/OptimismusPr1m3/DABubble_group',
+      liveLink: 'https://bastian-wolff.de/bubble/',
+      descEN: 'Chat messenger inspired by Slack. Stay in contact with colleagues, keep up to date, and share thoughts and ideas.',
+      descDE: 'Chat-Messenger inspiriert con Slack/Discord. Halte Kontakt zu Kollegen, Freunden oder Bekannten. Bleibe auf dem neuesten Stand und teile deine Gedanken und Ideen.',
+      tech: 'Angular | Firebase | SCSS',
+    },
+    {
+      image: '/assets/images/projectframes/Sharkie_NG.png',
+      title: 'Sharkie',
+      gitLink: 'https://github.com/OptimismusPr1m3/sharkie_ng_phaser',
+      liveLink: 'https://bastian-wolff.de/sharkie/',
+      descEN: 'Take on the role of Sharkie, a brave little white shark, as you navigate through treacherous waters filled with enemies. Now completely revamped with Angular | Phaser, making it significantly more performant!',
+      descDE: 'Schlüpfe in die Rolle von Sharkie, einem mutigen kleinen weißen Hai, und navigiere durch gefährliche Gewässer voller Feinde. Nun komplett überarbeitet mit Angular | Phaser und somit um ein vielfaches performanter!',
+      tech: 'Angular | Phaser | SCSS',
+      oldVersionLink: 'https://bastian-wolff.de/JumpNRun_SParkie/index.html',
+    },
+    {
+      image: '/assets/images/projectframes/Join.png',
+      title: 'Join',
+      gitLink: 'https://github.com/OptimismusPr1m3/Join_b_end_frontend',
+      liveLink: 'https://bastian-wolff.de/Join/index.html',
+      descEN: 'Welcome to Join, your collaborative Kanban board designed for group productivity! With Join, you can sign up and gain instant access to your personalized task dashboard, where you will find all your assignments neatly organized.',
+      descDE: 'Willkommen bei Join, deinem kollaborativen Kanban-Board, das für Gruppenproduktivität entwickelt wurde! Mit Join kannst du dich anmelden und sofort Zugriff auf dein personalisiertes Aufgaben-Dashboard erhalten, auf dem man all seine Aufgaben organisiert findet.',
+      tech: 'JavaScript | Python | Django | API',
+    },
   ];
 
   constructor(public lService: LanguageService) {}
-
 }

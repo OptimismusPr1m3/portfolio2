@@ -2,40 +2,14 @@
   <div class="content-wrapper-second">
   <section class="skills-content fontfam-poppins">
       <div class="code-icons">
-        <div class="icons-row">
+        <div class="icons-row" *ngFor="let row of skillRows">
           <div
-            data-aos="fade-down"
+            [attr.data-aos]="row.animation"
             class="icon-with-text"
-            *ngFor="let icon of iconsFirstRow; let i = index"
+            *ngFor="let skill of row.skills"
           >
-            <img src="{{ icon }}" />
-            <p>{{ iconsNamesFirst[i] }}</p>
-          </div>
-        </div>
-        <div class="icons-row">
-          <div
-            data-aos="fade-up"
-            class="icon-with-text"
-            *ngFor="let icon of iconsSecondRow; let i = index"
-          >
-            <img src="{{ icon }}" />
-            <p>{{ iconsNamesSecond[i] }}</p>
-          </div>
-        </div>
-        <div class="icons-row">
-          <div
-            data-aos="fade-down"
-            class="icon-with-text"
-            *ngFor="let icon of iconsThirdRow; let i = index"
-          >
-            <img src="{{ icon }}" />
-            <p>{{ iconsNamesThird[i] }}</p>
-          </div>
-        </div>
-        <div class="icons-row">
-          <div data-aos="fade-up" class="icon-with-text">
-            <img src="/assets/images/icons/material_design.png" />
-            <p>Material design</p>
+            <img [src]="skill.icon" />
+            <p>{{ skill.name }}</p>
           </div>
         </div>
         <a

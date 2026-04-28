@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { WelcomeComponent } from '../welcome/welcome.component';
 import { CommonModule } from '@angular/common';
@@ -21,17 +21,4 @@ import { AboutMeMobileComponent } from '../about-me-mobile/about-me-mobile.compo
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
 })
-export class MainComponent {
-/*
-  isMobile: boolean = false;
-  minWidthForMobile: number = 1450;
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {
-    if (window.innerWidth <= this.minWidthForMobile) {
-      this.isMobile = true;
-    } else {
-      this.isMobile = false;
-    }
-  }*/
-}
+export class MainComponent {}

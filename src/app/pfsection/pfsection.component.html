@@ -31,53 +31,53 @@
         <div
           data-aos="zoom-in-up"
           class="projects-cards"
-          *ngFor="let card of portfolioImages; let i = index"
+          *ngFor="let project of projects"
         >
-          <img src="{{ card }}" />
+          <img src="{{ project.image }}" />
           <div class="overlay">
             <div class="git-live-link">
               <div class="git-live-link-cont">
                 <a
                   class="git-link"
-                  href="{{ portfolioGitLinks[i] }}"
+                  href="{{ project.gitLink }}"
                   [target]="'_blank'"
                   >Github</a
                 >
                 <a
                   class="live-link"
-                  href="{{ portfolioLiveLinks[i] }}"
+                  href="{{ project.liveLink }}"
                   [target]="'_blank'"
                   >Live test</a
                 >
               </div>
-              <div class="old-version" *ngIf="i === 2">
+              <div class="old-version" *ngIf="project.oldVersionLink">
                 <a
                   [target]="'_blank'"
                   *ngIf="lService.selectedLanguage.language === 'en'"
                   class="live-link"
-                  href="{{ oldSharkieLink }}"
+                  href="{{ project.oldVersionLink }}"
                   >Previous version</a
                 >
                 <a
                   [target]="'_blank'"
                   *ngIf="lService.selectedLanguage.language !== 'en'"
                   class="live-link"
-                  href="{{ oldSharkieLink }}"
+                  href="{{ project.oldVersionLink }}"
                   >Vorherige Version</a
                 >
               </div>
             </div>
 
             <div class="pf-info-cont">
-              <h4>{{ portfolioTitles[i] }}</h4>
+              <h4>{{ project.title }}</h4>
               <p *ngIf="lService.selectedLanguage.language === 'en'">
-                {{ portfolioInfosEN[i] }}
+                {{ project.descEN }}
               </p>
               <p *ngIf="lService.selectedLanguage.language === 'de'">
-                {{ portfolioInfosDE[i] }}
+                {{ project.descDE }}
               </p>
               <div class="used-tech">
-                <p>{{ portfolioTech[i] }}</p>
+                <p>{{ project.tech }}</p>
               </div>
             </div>
           </div>

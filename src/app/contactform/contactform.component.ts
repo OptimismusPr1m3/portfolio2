@@ -1,9 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, NgModule, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { LanguageService } from '../service/language.service';
 import { RouterLink } from '@angular/router';
+
+interface ContactData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const MAIL_ENDPOINT = 'https://bastian-wolff.de/sendMail.php';
+const MESSAGE_SENT_TIMEOUT_MS = 2400;
 
 @Component({
   selector: 'app-contactform',
@@ -15,21 +24,22 @@ import { RouterLink } from '@angular/router';
 export class ContactformComponent {
   http = inject(HttpClient);
 
-  isInvalidName: boolean = false;
-  isInvalidMail: boolean = false;
-  isInvalidMessage: boolean = false;
-  pPolicy: boolean = false;
-  messageSent: boolean = false;
+  isInvalidName = false;
+  isInvalidMail = false;
+  isInvalidMessage = false;
+  pPolicy = false;
+  messageSent = false;
+  submitError = false;
 
-  contactData = {
+  contactData: ContactData = {
     name: '',
     email: '',
     message: '',
   };
 
-  post = {
-    endPoint: 'https://bastian-wolff.de/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
+  private post = {
+    endPoint: MAIL_ENDPOINT,
+    body: (payload: ContactData) => JSON.stringify(payload),
     options: {
       headers: {
         'Content-Type': 'text/plain',
@@ -38,48 +48,46 @@ export class ContactformComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
+  constructor(public lService: LanguageService) {}
+
+  onSubmit(ngForm: NgForm): void {
     if (ngForm.valid && ngForm.submitted) {
+      this.submitError = false;
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (response: any) => {
-            console.log(response);
+          next: () => {
             this.messageSent = true;
             ngForm.resetForm();
+            setTimeout(() => (this.messageSent = false), MESSAGE_SENT_TIMEOUT_MS);
           },
-          error: (error: any) => {
-            console.error(error);
+          error: () => {
+            this.submitError = true;
+            setTimeout(() => (this.submitError = false), MESSAGE_SENT_TIMEOUT_MS);
           },
-          complete: () => console.info('send post complete'),
         });
     } else if (!ngForm.valid && ngForm.submitted) {
       this.checkNameValidation();
       this.checkEmailValidation();
       this.checkMessageValidation();
     }
-    setTimeout(() => {
-      this.messageSent = false;
-    }, 2400);
   }
 
-  checkMessageValidation() {
-    if (this.contactData.message == '') {
+  checkMessageValidation(): void {
+    if (this.contactData.message === '') {
       this.isInvalidMessage = true;
     }
   }
 
-  checkNameValidation() {
-    if (this.contactData.name == '') {
+  checkNameValidation(): void {
+    if (this.contactData.name === '') {
       this.isInvalidName = true;
     }
   }
 
-  checkEmailValidation() {
-    if (this.contactData.email == '') {
+  checkEmailValidation(): void {
+    if (this.contactData.email === '') {
       this.isInvalidMail = true;
     }
   }
-
-  constructor(public lService: LanguageService) {}
 }

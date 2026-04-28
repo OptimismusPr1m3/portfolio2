@@ -1,6 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { LanguageService } from '../../service/language.service';
-
 
 @Component({
   selector: 'app-about-me-content',
@@ -10,10 +9,5 @@ import { LanguageService } from '../../service/language.service';
   styleUrl: './about-me-content.component.scss'
 })
 export class AboutMeContentComponent {
-
-  scrollHeight: number = 0;
-  isOnPoint: boolean = false;
-
   constructor(public lService: LanguageService) {}
-
 }

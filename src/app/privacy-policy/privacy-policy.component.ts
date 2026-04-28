@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../service/language.service';
 
 @Component({
@@ -9,11 +9,10 @@ import { LanguageService } from '../service/language.service';
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss'
 })
-export class PrivacyPolicyComponent {
-  constructor(public lService: LanguageService){}
+export class PrivacyPolicyComponent implements OnInit {
+  constructor(public lService: LanguageService) {}
 
-  ngOnInit() {
-    window.scrollTo(0,0)
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
   }
-
 }

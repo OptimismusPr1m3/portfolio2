@@ -682,27 +682,21 @@ export class LanguageService {
         },
       },
     });
-    this.setAreaLang(this.header, 'header');
-    this.setAreaLang(this.aboutMe, 'aboutMe');
-    this.setAreaLang(this.skills, 'skills');
-    this.setAreaLang(this.portfolio, 'portfolio');
-    this.setAreaLang(this.contactSection, 'contactSection');
-    this.setAreaLang(this.imprint, 'imprint');
-    this.setAreaLang(this.pPolicy_1, 'pPolicy_1');
-    this.setAreaLang(this.pPolicy_2, 'pPolicy_2');
-    this.setAreaLang(this.pPolicy_3, 'pPolicy_3');
-    this.setAreaLang(this.pPolicy_4, 'pPolicy_4');
-    this.setAreaLang(this.footer, 'footer');
+    this.updateAllSections();
   }
 
-  setAreaLang(area: { [key: string]: string }, langArea: string) {
-    for (let key in area) {
+  setAreaLang(area: { [key: string]: string }, langArea: string): void {
+    for (const key in area) {
       area[key] = i18next.t(`${langArea}.${key}`);
     }
   }
 
-  changeLang(language: string) {
+  changeLang(language: string): void {
     i18next.changeLanguage(language);
+    this.updateAllSections();
+  }
+
+  private updateAllSections(): void {
     this.setAreaLang(this.header, 'header');
     this.setAreaLang(this.aboutMe, 'aboutMe');
     this.setAreaLang(this.skills, 'skills');

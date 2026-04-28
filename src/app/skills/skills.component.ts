@@ -2,6 +2,15 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { LanguageService } from '../service/language.service';
 
+interface SkillIcon {
+  icon: string;
+  name: string;
+}
+
+interface SkillRow {
+  animation: 'fade-down' | 'fade-up';
+  skills: SkillIcon[];
+}
 
 @Component({
   selector: 'app-skills',
@@ -11,37 +20,38 @@ import { LanguageService } from '../service/language.service';
   styleUrl: './skills.component.scss',
 })
 export class SkillsComponent {
-  iconsFirstRow: string[] = [
-    '/assets/images/icons/javascript.png',
-    '/assets/images/icons/angular.png',
-    '/assets/images/icons/typescript.png',
-    '/assets/images/icons/html.png',
-    //'/assets/images/icons/material_design.png',
+  skillRows: SkillRow[] = [
+    {
+      animation: 'fade-down',
+      skills: [
+        { icon: '/assets/images/icons/javascript.png', name: 'JavaScript' },
+        { icon: '/assets/images/icons/angular.png', name: 'Angular' },
+        { icon: '/assets/images/icons/typescript.png', name: 'TypeScript' },
+        { icon: '/assets/images/icons/html.png', name: 'HTML' },
+      ],
+    },
+    {
+      animation: 'fade-up',
+      skills: [
+        { icon: '/assets/images/icons/git.png', name: 'GIT' },
+        { icon: '/assets/images/icons/firebase.png', name: 'Firebase' },
+        { icon: '/assets/images/icons/css.png', name: 'CSS' },
+      ],
+    },
+    {
+      animation: 'fade-down',
+      skills: [
+        { icon: '/assets/images/icons/scrum.png', name: 'Scrum' },
+        { icon: '/assets/images/icons/api.png', name: 'Rest-Api' },
+      ],
+    },
+    {
+      animation: 'fade-up',
+      skills: [
+        { icon: '/assets/images/icons/material_design.png', name: 'Material design' },
+      ],
+    },
   ];
-  iconsSecondRow: string[] = [
-    '/assets/images/icons/git.png',
-    '/assets/images/icons/firebase.png',
-    '/assets/images/icons/css.png',
-  ];
-  iconsThirdRow: string[] = [
-    '/assets/images/icons/scrum.png',
-    '/assets/images/icons/api.png',
-  ];
-  iconsNamesFirst: string[] = [
-    'JavaScript',
-    'Angular',
-    'TypeScript',
-    'HTML',
-    //'Material design',
-  ];
-
-  iconsNamesSecond: string[] = ['GIT',
-  'Firebase',
-  'CSS',];
-  iconsNamesThird: string[] = ['Scrum',
-  'Rest-Api',];
-
- 
 
   constructor(public lService: LanguageService) {}
 }

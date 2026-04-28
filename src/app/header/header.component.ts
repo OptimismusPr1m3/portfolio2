@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { HeadertemplateComponent } from '../shared/headertemplate/headertemplate.component';
 
+const NAV_CLOSE_DELAY_MS = 180;
+
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -10,24 +12,20 @@ import { HeadertemplateComponent } from '../shared/headertemplate/headertemplate
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  barOpened = false;
+  barWasOpened = false;
+  barWasClosed = false;
 
-  barOpened: boolean = false;
-  barWasOpened: boolean = false;
-  barWasClosed: boolean = false;
-
-  constructor() {}
-  toggleNavBar() {
+  toggleNavBar(): void {
     this.barWasClosed = false;
     this.barOpened = true;
     this.barWasOpened = true;
   }
 
-  handleBarClosing(wasClosed: boolean) {
+  handleBarClosing(wasClosed: boolean): void {
     if (wasClosed) {
       this.barWasClosed = true;
-      setTimeout(() => {
-        this.barOpened = false;
-      }, 180)
+      setTimeout(() => (this.barOpened = false), NAV_CLOSE_DELAY_MS);
     }
   }
 }
